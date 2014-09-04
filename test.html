@@ -16,17 +16,35 @@
     }
     </style>
     <script>
-    $(function() {
-      $( "#city_name" ).autocomplete({
-        source: "search.php",
-        minLength: 2,
-        select: function( event, ui ) {
-          log( ui.item ?
-            "Selected: " + ui.item.value + " aka " + ui.item.id :
-            "Nothing selected, input was " + this.value );
-        }
-      });
+   $(function() {
+    var availableTags = [
+      "ActionScript",
+      "AppleScript",
+      "Asp",
+      "BASIC",
+      "C",
+      "C++",
+      "Clojure",
+      "COBOL",
+      "ColdFusion",
+      "Erlang",
+      "Fortran",
+      "Groovy",
+      "Haskell",
+      "Java",
+      "JavaScript",
+      "Lisp",
+      "Perl",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Scala",
+      "Scheme"
+    ];
+    $( "#city_name" ).autocomplete({
+      source: availableTags
     });
+  });
   </script>
   </head>
   <body>
