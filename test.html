@@ -37,6 +37,7 @@
 							console.log("Item:"+val);
 							$el = $( "<a href='#'>Link " + val + "</a>" ).bind( "click", action );
 							$( "#cty_results" ).controlgroup( "container" )[ "append" ]( $el );
+							$el.buttonMarkup();
 						});
 						group.controlgroup( "refresh" );
 					});
