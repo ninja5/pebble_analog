@@ -21,7 +21,7 @@
 					console.log("City is "+cty_nm);
 					group.controlgroup( "container" ).empty();
 					$.ajax({
-						url: "https://maps.googleapis.com/maps/api/geocode/",
+						url: "https://maps.googleapis.com/maps/api/geocode/json",
 						dataType: "jsonp",
 						crossDomain: true,
 						data: {
