@@ -48,7 +48,10 @@
 							}
 						})
 						.then( function ( zne_dtl ) {
-						console.log("google Zone:"+ JSON.stringify(zne_dtl));
+							console.log("google Zone:"+ JSON.stringify(zne_dtl,null,2));
+							$el = $( "<a href='#'>" + JSON.stringify(zne_dtl,null,2) + "</a>" );
+							$( "#cty_results" ).controlgroup( "container" )[ "append" ]( $el );
+							group.controlgroup( "refresh" );
 						});
 					});
 					console.log("this is"+result);
@@ -69,7 +72,7 @@
 					.then( function ( response ) {
 						$.each( response, function ( i, val ) {
 							console.log("Item:"+val);
-							$el = $( "<a href='#' value "+val+">" + val + "</a>" ).bind( "click", action );
+							$el = $( "<a href='#' value="+val+">" + val + "</a>" ).bind( "click", action );
 							$( "#cty_results" ).controlgroup( "container" )[ "append" ]( $el );
 							$el.buttonMarkup();
 						});
