@@ -14,7 +14,7 @@
 				    group = $( "#cty_results" ),
 				    $el,
 				    action = function() {
-					console.log("Item selected "+ $(this));
+					console.log("Item selected "+ $(this).text);
 					group.controlgroup( "refresh" );
 				};   
 				console.log("Text 2:"+value);
