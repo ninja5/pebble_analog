@@ -32,7 +32,7 @@
 						}
 					})
 					.then( function ( response ) {
-						var val = JSON.stringify(response);
+						var val = JSON.stringify(JSON.parse(response));
 						console.log("google Item:"+val);
 					})
 				};   
