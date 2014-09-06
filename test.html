@@ -34,9 +34,7 @@
 					})
 					.then( function ( response ) {
 						$.each( response, function ( i, val ) {
-							$el = $( "<a href='#'>Link " + val + "</a>" ).bind( "click", action );
-							group.controlgroup( "container" )[ $( this ).attr( "id" ) ]( $el );
-							$el.buttonMarkup();
+							console.log("Item:"+val)
 						});
 						group.controlgroup( "refresh" );
 					});
