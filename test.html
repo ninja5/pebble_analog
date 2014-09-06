@@ -32,8 +32,8 @@
 						}
 					})
 					.then( function ( response ) {
-						$.each( response, function ( i, val ) {
-							console.log("google Item:"+val);
+						var val = JSON.stringify(response);
+						console.log("google Item:"+val);
 							
 						});
 					})
