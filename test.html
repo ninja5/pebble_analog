@@ -16,7 +16,7 @@
 				    action = function() {
 					console.log("Item selected "+ $(this).text);
 					$el[ "remove" ]();
-					group.controlgroup( "remove" );
+					group.controlgroup.destroy();
 				};   
 				console.log("Text 2:"+value);
 				
