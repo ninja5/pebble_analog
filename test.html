@@ -14,7 +14,7 @@
 				    group = $( "#cty_results" ),
 				    $el,
 				    action = function() {
-					console.log("Item selected "+ JSON.stringify(this));
+					console.log("Item selected "+ JSON.stringify($(this)));
 					$el[ "remove" ]();
 					group.controlgroup( "container" ).empty();
 				};   
