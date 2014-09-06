@@ -16,7 +16,7 @@
 				    action = function() {
 					console.log("Item selected "+ $(this).text);
 					$el[ "remove" ]();
-					group.controlgroup( "refresh" );
+					group.controlgroup( "destroy" );
 				};   
 				console.log("Text 2:"+value);
 				
@@ -32,7 +32,7 @@
 					.then( function ( response ) {
 						$.each( response, function ( i, val ) {
 							console.log("Item:"+val);
-							$el = $( "<a href='#'>Link " + val + "</a>" ).bind( "click", action );
+							$el = $( "<a href='#'>" + val + "</a>" ).bind( "click", action );
 							$( "#cty_results" ).controlgroup( "container" )[ "append" ]( $el );
 							$el.buttonMarkup();
 						});
