@@ -13,6 +13,7 @@
 				var value =data.input.val(),
 				    group = $( "#cty_results" ),
 				    $el,
+				    result,
 				    action = function() {
 				    	var x = $(this), y = $( "#cty_sel" )[0].parentNode.firstElementChild,
 				    	cty_res =  x[0].text, cty_nm = cty_res.substring(0,cty_res.search(","));
@@ -33,8 +34,10 @@
 					})
 					.then( function ( response ) {
 					//	var val = JSON.stringify(JSON.parse(response));
-						console.log("google Item:"+responce);
-					})
+					//	console.log("google Item:"+responce);
+						result = responce;
+					});
+					console.log("this is"+result);
 				};   
 				console.log("Text 2:"+value);
 				
