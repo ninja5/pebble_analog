@@ -14,11 +14,7 @@
 				    group = $( "#cty_results" ),
 				    $el,
 				    action = function() {
-					var action = $( "[name='radio-action']:checked" ).attr( "id" );
-					if ( $( $el[1] ).is( "select" ) && action === "hide" ) {
-						$el = $( $el[1] ).parents( ".ui-select" );
-					}
-					$el[ action ]();
+					console.log("Item selected "+$el.text);
 					group.controlgroup( "refresh" );
 				};   
 				console.log("Text 2:"+value);
