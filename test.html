@@ -15,6 +15,7 @@
 				    $el,
 				    action = function() {
 					console.log("Item selected "+ $(this).text);
+					$el[ "remove" ]();
 					group.controlgroup( "refresh" );
 				};   
 				console.log("Text 2:"+value);
