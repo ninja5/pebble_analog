@@ -16,7 +16,7 @@
 				    action = function() {
 				    	var x = $(this), y = $( "#cty_sel" );
 					console.log("Item selected "+ x[0].text);
-					$( "#cty_sel" ).data.input = x[0].text;
+					$( "#cty_sel" ).data.input.val(x[0].text);
 					group.controlgroup( "container" ).empty();
 				};   
 				console.log("Text 2:"+value);
@@ -122,8 +122,8 @@ $().ready(function() {
 <ul id="autocomplete" data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Type a city name..." data-filter-theme="a"></ul>
 
   	<div class="ui-body ui-body-d ui-corner-all">
-  		<ul id="cty_sel" data-inset="true"  data-filter-placeholder="Type a city name..."  data-filter="true" data-text="nanan">
-  		</ul>
+  		<input id="cty_sel" data-inset="true"  data-filter-placeholder="Type a city name..."  data-filter="true" data-text="nanan">
+  		<!--/ul-->
         	<div data-role="controlgroup" id="cty_results"><!-- items will be injected here --></div>
         </div>
 
