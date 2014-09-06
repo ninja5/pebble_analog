@@ -14,9 +14,11 @@
 				    group = $( "#cty_results" ),
 				    $el,
 				    action = function() {
-				    	var x = $(this), y = $( "#cty_sel" )[0].parentNode.firstElementChild;
-					console.log("Item selected "+ x[0].text);
-					y[0].value = x[0].text;
+				    	var x = $(this), y = $( "#cty_sel" )[0].parentNode.firstElementChild,
+				    	cty_res =  x[0].text, cty_nm = cty_res.substring(0,cty_res.search(","));
+					console.log("Item selected "+ cty_res);
+					y[0].value = cty_res;
+					console.log("City is "+cty_nm);
 					group.controlgroup( "container" ).empty();
 				};   
 				console.log("Text 2:"+value);
