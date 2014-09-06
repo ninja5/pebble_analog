@@ -14,7 +14,7 @@
 				    group = $( "#cty_results" ),
 				    $el,
 				    action = function() {
-				    	var x = $(this), y = $( "#cty_sel" )[0].parentNode;
+				    	var x = $(this), y = $( "#cty_sel" )[0].parentNode.firstElementChild;
 					console.log("Item selected "+ x[0].text);
 					y.data.input.val(x[0].text);
 					group.controlgroup( "container" ).empty();
