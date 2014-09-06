@@ -51,7 +51,7 @@
 							console.log("google Zone:"+ JSON.stringify(zne_dtl,null,2));
 							$.each( zne_dtl, function ( i, val ) {
 								console.log("Item:"+val);
-								$el = $( "<a href='#' value="+val+">" + val + "</a>" ).bind( "click", action );
+								$el = $( "<a href='#'>" + i+ " " + val + "</a>" ).bind( "click", action );
 								$( "#cty_results" ).controlgroup( "container" )[ "append" ]( $el );
 								$el.buttonMarkup();
 							});
