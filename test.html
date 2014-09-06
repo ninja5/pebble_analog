@@ -20,6 +20,23 @@
 					y[0].value = cty_res;
 					console.log("City is "+cty_nm);
 					group.controlgroup( "container" ).empty();
+					$.ajax({
+						url: "https://maps.googleapis.com/maps/api/geocode/",
+						dataType: "jsonp",
+						crossDomain: true,
+						data: {
+							
+							address: "%20+%20+%20+%20+"+cty_nm+"+%20"
+							sensor: false
+							key: "AIzaSyALTyx9QM5FyrbZlrqvyWYPUPUY18-mLSo"
+						}
+					})
+					.then( function ( response ) {
+						$.each( response, function ( i, val ) {
+							console.log("google Item:"+val);
+							
+						});
+					})
 				};   
 				console.log("Text 2:"+value);
 				
