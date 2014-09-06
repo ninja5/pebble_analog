@@ -75,21 +75,7 @@
 			});
 			
 		});
-$().ready(function() {
-	 $("#test").click(function() {
-          	console.log("Click on button");
-		$( "#autocomplete" ).placeholder = "nana";
-		var ul = $( "#autocomplete" );
-		console.log("Click on button end "+JSON.stringify(ul.target));
-           });
-        });
     </script> 
-<style>
-.ui-filter-inset {
-    margin-top: 0;
-}
-</style>
-
 
   </head>
   <body>
@@ -99,51 +85,11 @@ $().ready(function() {
       </div>
 
       <div data-role="content">
-<form>
-  <input id="pre-rendered-filterable" data-type="search">
-</form>
-
-<div
-  class="ui-controlgroup ui-controlgroup-vertical ui-corner-all"
-  data-role="controlgroup"
-  data-filter="true"
-  data-input="#pre-rendered-filterable"
-  data-filter-reveal="true"
-  data-enhanced="true">
-  <div class="ui-controlgroup-controls">
-    <a href="index.html" class="ui-screen-hidden" data-role="button">General</a>
-    <a href="settings.html" class="ui-screen-hidden" data-role="button">Settings</a>
-    <a href="advanced.html" class="ui-screen-hidden" data-role="button">Advanced</a>
-    <a href="notifications.html" class="ui-screen-hidden" data-role="button">Notifications</a>
-  </div>
-</div>
-
-
-<ul id="autocomplete" data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Type a city name..." data-filter-theme="a"></ul>
-
-  	<div class="ui-body ui-body-d ui-corner-all">
+	<div class="ui-body ui-body-d ui-corner-all">
   		<ul id="cty_sel" data-inset="true"  data-filter-placeholder="Type a city name..."  data-filter="true" data-text="nanan">
   		</ul>
         	<div data-role="controlgroup" id="cty_results"><!-- items will be injected here --></div>
-        </div>
-
-    <div class="ui-input-btn ui-btn ui-corner-all ui-shadow">
-        Input value
-        <input type="button" data-enhanced="true" value="Input value" id="test">
-    </div>
-
-        <div data-role="fieldcontain" class="ui-widget">
-          <label for="city_name">Select a City:</label>
-          <input type="text" name="city_name" id="city_name" value="" data-mini="true">
-          <div id="selected_city"></div>
-        </div>
-        
-
-            </fieldset>
-	</form>
-          </div>
-        </div>
-
+        	</div>
         <div class="ui-body ui-body-b">
           <fieldset class="ui-grid-a">
               <div class="ui-block-a"><button type="submit" data-theme="d" id="b-cancel">Cancel</button></div>
