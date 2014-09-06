@@ -16,7 +16,7 @@
 				    action = function() {
 				    	var x = $(this), y = $( "#cty_sel" );
 					console.log("Item selected "+ x[0].text);
-					$( "#cty_sel" ).input.val(x[0].text);
+					y.val(x[0].text);
 					group.controlgroup( "container" ).empty();
 				};   
 				console.log("Text 2:"+value);
