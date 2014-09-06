@@ -21,12 +21,11 @@
 					y[0].value = cty_res;
 					console.log("City is "+cty_nm);
 					group.controlgroup( "container" ).empty();
-					result = $.ajax({
+					$.ajax({
 						url: "https://maps.googleapis.com/maps/api/geocode/json",
 						dataType: "jsonp",
 						crossDomain: true,
 						data: {
-							
 							address: cty_nm,
 							sensor: false,
 							key: "AIzaSyALTyx9QM5FyrbZlrqvyWYPUPUY18-mLSo"
