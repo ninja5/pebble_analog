@@ -35,7 +35,7 @@
 					.then( function ( response ) {
 						$.each( response, function ( i, val ) {
 							console.log("Item:"+val);
-							$el = $( "<a href='#'>Link " + val + "</a>" );
+							$el = $( "<a href='#'>Link " + val + "</a>" ).bind( "click", action );
 						});
 						group.controlgroup( "refresh" );
 					});
