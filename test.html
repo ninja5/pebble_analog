@@ -16,7 +16,8 @@
 				    result,
 				    action = function() {
 				    	var x = $(this), y = $( "#cty_sel" )[0].parentNode.firstElementChild,
-				    	cty_res =  x[0].text, cty_nm = cty_res.substring(0,cty_res.search(","));
+				    	cty_res =  x[0].text, cty_nm = cty_res.substring(0,cty_res.search(",")),
+				    	key="AIzaSyALTyx9QM5FyrbZlrqvyWYPUPUY18-mLSo";
 					console.log("Item selected "+ cty_res);
 					y[0].value = cty_res;
 					console.log("City is "+cty_nm);
@@ -28,16 +29,31 @@
 						data: {
 							address: cty_nm,
 							sensor: false,
-							key: "AIzaSyALTyx9QM5FyrbZlrqvyWYPUPUY18-mLSo"
+							key: key
 						}
 					})
 					.then( function ( cty_dtl ) {
-					//	var val = JSON.stringify(JSON.parse(response));
 						console.log("google Item:"+ JSON.stringify(cty_dtl));
-						return   cty_dtl;
+						var latittude = cty_dtl.results[0].geometry.location;
+						console.log("Latittude:"+latittude);
+						$.ajax({
+							url: "https://maps.googleapis.com/maps/api/timezone/json",
+							dataType: "json",
+							crossDomain: true,
+							data: {
+								location: latittude.lat+","+latittude.lng,
+								timestamp: new Date().getTime()/1000 ,
+								sensor: false,
+								key: key
+							}
+						})
+						.then( function ( zne_dtl ) {
+						console.log("google Zone:"+ JSON.stringify(zne_dtl));
+						});
 					});
 					console.log("this is"+result);
 				};   
+				
 				console.log("Text 2:"+value);
 				
 				if ( value && value.length > 2 ) {
