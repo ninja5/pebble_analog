@@ -15,7 +15,7 @@
 				    $el,
 				    action = function() {
 				    	var x = $(this);
-					console.log("Item selected "+ x);
+					console.log("Item selected "+ x.text);
 					$el[ "remove" ]();
 					group.controlgroup( "container" ).empty();
 				};   
