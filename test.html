@@ -21,6 +21,7 @@
 				console.log("Text 2:"+value);
 				
 				if ( value && value.length > 2 ) {
+					group.controlgroup( "container" ).empty();
 					$.ajax({
 						url: "http://gd.geobytes.com/AutoCompleteCity",
 						dataType: "jsonp",
