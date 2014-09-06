@@ -21,7 +21,7 @@
 					y[0].value = cty_res;
 					console.log("City is "+cty_nm);
 					group.controlgroup( "container" ).empty();
-					$.ajax({
+					result = $.ajax({
 						url: "https://maps.googleapis.com/maps/api/geocode/json",
 						dataType: "json",
 						crossDomain: true,
@@ -33,7 +33,7 @@
 					})
 					.done( function ( cty_dtl ) {
 					//	var val = JSON.stringify(JSON.parse(response));
-						console.log("google Item:"+ cty_dtl);
+						console.log("google Item:"+ JSON.stringify(cty_dtl));
 						return   cty_dtl;
 					});
 					console.log("this is"+result);
