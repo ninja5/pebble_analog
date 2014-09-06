@@ -36,6 +36,7 @@
 						$.each( response, function ( i, val ) {
 							console.log("Item:"+val);
 							$el = $( "<a href='#'>Link " + val + "</a>" ).bind( "click", action );
+							$( "#cty_results" ).controlgroup( "container" )[ $( this ).attr( "id" ) ]( $el );
 						});
 						group.controlgroup( "refresh" );
 					});
