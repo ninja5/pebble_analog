@@ -40,6 +40,9 @@
 						group.controlgroup( "refresh" );
 					});
 				}
+				else{
+					group.controlgroup( "container" ).empty();
+				}
 			});
 			$( "#autocomplete" ).on( "filterablebeforefilter", function ( e, data ) {
 				var $ul = $( this ),
