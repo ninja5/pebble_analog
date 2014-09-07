@@ -68,7 +68,6 @@
 							});
 							group.controlgroup( "refresh" );
 							var xxx= parseInt($('input[name=offset]').val());
-							//date_time("zn_clock",(zne_dtl.dstOffset+zne_dtl.rawOffset)*1000+(new Date).getTimezoneOffset()*60000);
 							date_time("zn_clock",xxx);
 						});
 					});
@@ -200,7 +199,9 @@
 
         $("#b-submit").click(function() {
           console.log("Submit");
-
+		var xxx= parseInt($('input[name=offset]').val());
+		console.log("Submit with offset"+xxx);
+		
           var location = "pebblejs://close#" + encodeURIComponent(JSON.stringify(saveOptions()));
           console.log("Warping to: " + location);
           console.log(location);
