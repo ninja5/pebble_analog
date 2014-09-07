@@ -51,7 +51,7 @@
 							console.log("google Zone:"+ JSON.stringify(zne_dtl,null,2));
 							$.each( zne_dtl, function ( i, val ) {
 								console.log("Item:"+val);
-								if(i==status){
+								if(i=="status"){
 									$el = $( "<il href='#' id='zn_clock'>" + i+ ": " + val + "</il>" );
 									date_time("zn_clock",0);
 									$( "#cty_results" ).controlgroup( "container" )[ "append" ]( $el );
