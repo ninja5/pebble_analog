@@ -60,12 +60,12 @@
 								if(i=="dstOffset" || i=="rawOffset"){
 									return true;
 								}
-								$el = $( "<il href='#'>" + i+ ": " + val + "</il>" );
+								$el = $( "<il href='#'> " + val + "</il>" );
 								$( "#cty_results" ).controlgroup( "container" )[ "append" ]( $el );
 								$el.buttonMarkup();
 							});
 							group.controlgroup( "refresh" );
-							date_time("zn_clock",0);
+							date_time("zn_clock",zne_dtl.rawOffset);
 						});
 					});
 					console.log("this is"+result);
