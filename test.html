@@ -88,8 +88,9 @@
 				}
 			});
 		});
-		function date_time(id){
+		function date_time(id,offset){
         		date = new Date;
+        		date += offset;
         		h = date.getHours();
         		if(h<10){
                 		h = "0"+h;
@@ -110,7 +111,7 @@
     </script> 
 
   </head>
-  <body onload = date_time('date_time')>
+  <body onload = date_time('date_time', 0)>
     <div data-role="page" id="main">
       <div data-role="header" class="jqm-header">
         <h1>Configurable Pebble App</h1>
