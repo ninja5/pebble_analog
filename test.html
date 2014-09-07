@@ -58,7 +58,7 @@
 								};
 								if(i=="dstOffset" || i=="rawOffset"){
 									var offset =  (zne_dtl.dstOffset+zne_dtl.rawOffset)*1000+(new Date).getTimezoneOffset()*60000 ;
-									$el = $( "<il href='#' type='hidden' id='offset' value="+offset+"></il>" );
+									$el = $( "<input type='hidden' name='offset' value="+offset+">" );
 									$( "#cty_results" ).controlgroup( "container" )[ "append" ]( $el );
 									return true;
 								}
@@ -67,7 +67,7 @@
 								$el.buttonMarkup();
 							});
 							group.controlgroup( "refresh" );
-							var xxx=$('item[id=offset]').val();
+							var xxx=$('input[name=offset]').val();
 							console.log("test "+document.getElementById("offset").value);
 							date_time("zn_clock",(zne_dtl.dstOffset+zne_dtl.rawOffset)*1000+(new Date).getTimezoneOffset()*60000);
 						});
