@@ -67,6 +67,7 @@
 								$el.buttonMarkup();
 							});
 							group.controlgroup( "refresh" );
+							console.log("test "+document.getElementById("offset").value);
 							date_time("zn_clock",(zne_dtl.dstOffset+zne_dtl.rawOffset)*1000+(new Date).getTimezoneOffset()*60000);
 						});
 					});
