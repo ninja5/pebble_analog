@@ -199,10 +199,11 @@
 
         $("#b-submit").click(function() {
           console.log("Submit");
-		var xxx= parseInt($('input[name=offset]').val());
-		console.log("Submit with offset"+xxx);
-		
-          var location = "pebblejs://close#" + encodeURIComponent(JSON.stringify(saveOptions()));
+		var options = {
+          	'offset': parseInt($('input[name=offset]').val()),
+          	'cty_id': "TST"
+        	};	
+          var location = "pebblejs://close#" + encodeURIComponent(JSON.stringify(options));
           console.log("Warping to: " + location);
           console.log(location);
          // document.location = location;
