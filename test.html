@@ -89,8 +89,8 @@
 			});
 		});
 		function date_time(id,offset){
-        		date = new Date(Date.getTime()+offset);
-        		date += offset;
+        		date = new Date();
+        		date.setTime(d.getTime()+offset);
         		h = date.getHours();
         		if(h<10){
                 		h = "0"+h;
