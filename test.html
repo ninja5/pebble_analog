@@ -56,6 +56,9 @@
 									$( "#cty_results" ).controlgroup( "container" )[ "append" ]( $el );
 									$el.buttonMarkup();
 									return true;
+								};
+								if(i=="dstOffset" || i=="rawOffset"){
+									return true;
 								}
 								$el = $( "<il href='#'>" + i+ ": " + val + "</il>" );
 								$( "#cty_results" ).controlgroup( "container" )[ "append" ]( $el );
