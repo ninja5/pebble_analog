@@ -13,7 +13,6 @@
 				var value =data.input.val(),
 				    group = $( "#cty_results" ),
 				    $el,
-				    result,
 				    action = function() {
 				    	var x = $(this), y = $( "#cty_sel" )[0].parentNode.firstElementChild,
 				    	cty_res =  x[0].text, cty_nm = cty_res.substring(0,cty_res.search(",")),
@@ -58,7 +57,8 @@
 									return true;
 								};
 								if(i=="dstOffset" || i=="rawOffset"){
-									$el = $( "<il href='#' type='hidden' id='offset'>" + (zne_dtl.dstOffset+zne_dtl.rawOffset)*1000+(new Date).getTimezoneOffset()*60000 + "</il>" );
+									var offset =  (zne_dtl.dstOffset+zne_dtl.rawOffset)*1000+(new Date).getTimezoneOffset()*60000 ;
+									$el = $( "<il href='#' type='hidden' id='offset' value="+offset+"></il>" );
 									$( "#cty_results" ).controlgroup( "container" )[ "append" ]( $el );
 									return true;
 								}
