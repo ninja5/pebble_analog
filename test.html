@@ -161,12 +161,12 @@
 	function get_cty_lbl(cty_name){
 		console.log("Searching for "+cty_name);
 		
-		var cty_list={};
-		cty_list = $.getJSON("cty_list.json", function() {
+		var cty_list=cty_name;
+		$.getJSON("cty_list.json", function() {
 			console.log( "success" );
 			})
   			.done(function(data) {
-    				console.log(cty_name+ " second success" +JSON.stringify(data) );
+    				console.log(cty_list+ " second success" +JSON.stringify(data) );
   			})
   			.fail(function() {
     				console.log( "error" );
