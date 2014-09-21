@@ -165,8 +165,8 @@
 		cty_list = $.getJSON("cty_list.json", function() {
 			console.log( "success" );
 			})
-  			.done(function() {
-    				console.log( "second success" +JSON.stringify(cty_list) );
+  			.done(function(data) {
+    				console.log( "second success" +JSON.stringify(data) );
   			})
   			.fail(function() {
     				console.log( "error" );
