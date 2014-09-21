@@ -162,9 +162,21 @@
 		console.log("Searching for "+cty_name);
 		
 		var cty_list={};
-  		$.getJSON("cty_list.json", function(data) { 
-    			cty_list=data;
-  		}); 
+		cty_list = $.getJSON("cty_list.json", function() {
+			console.log( "success" );
+			})
+  			.done(function() {
+    				console.log( "second success" );
+  			})
+  			.fail(function() {
+    				console.log( "error" );
+  			})
+  			.always(function() {
+    				console.log( "complete" );
+  		});
+  		//$.getJSON("cty_list.json", function(data) { 
+    		//	cty_list=data;
+  		//}); 
 		//var cty_id = cty_list[0];
         	//System.out.println( "Coolness: " + cty_id );
         	
