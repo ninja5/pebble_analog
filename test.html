@@ -60,8 +60,7 @@
 									var offset =  (zne_dtl.dstOffset+zne_dtl.rawOffset)*1000+(new Date).getTimezoneOffset()*60000 ;
 									$el = $( "<input type='hidden' name='offset' value="+offset+">" );
 									$( "#cty_results" ).controlgroup( "container" )[ "append" ]( $el );
-									console.log("City before store in hidden element is "+cty_nm);
-									$el = $( "<input type='hidden' name='cty_nm' value="+cty_nm+">" );
+									$el = $( "<input type='hidden' name='cty_nm' value='"+cty_nm+"'>" );
 									$( "#cty_results" ).controlgroup( "container" )[ "append" ]( $el );
 									return true;
 								}
