@@ -160,9 +160,12 @@
     <script>
 	function get_cty_lbl(cty_name){
 		console.log("Searching for "+cty_name);
-		Object obj = parser.parse(new FileReader("cty_list.json"));
-		JSONObject json = (JSONObject) obj;
-		String cty_id = json.getString(cty_name);
+		
+		var cty_list={};
+  		$.getJSON('cty_list.json', function(data) { 
+    			cty_list=data;
+  		}); 
+		String cty_id = cty_list[cty_name].val;
         	System.out.println( "Coolness: " + cty_id );
         	
 		
