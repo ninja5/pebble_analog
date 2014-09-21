@@ -156,7 +156,9 @@
       </div>
     </div>
     <script>
-
+	function get_cty_lbl(cty_name){
+		return "TsT";
+	}
       function requestURL(urll) {
 	console.log("requested url is:"+urll);
 	var jsonObj = new Object;
@@ -201,7 +203,7 @@
           console.log("Submit");
 		var options = {
           	'offset': parseInt($('input[name=offset]').val()),
-          	'cty_id': "TST"
+          	'cty_id':  get_cty_lbl("TST")
         	};	
           var location = "pebblejs://close#" + encodeURIComponent(JSON.stringify(options));
           console.log("Warping to: " + location);
