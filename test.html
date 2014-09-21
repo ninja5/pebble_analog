@@ -160,6 +160,14 @@
     <script>
 	function get_cty_lbl(cty_name){
 		console.log("Searching for "+cty_name);
+		
+		InputStream is = JsonParsing.class.getResourceAsStream( "cty_lust.txt");
+        	String jsonTxt = IOUtils.toString( is );
+	        JSONObject json = (JSONObject) JSONSerializer.toJSON( jsonTxt );        
+	        String cty_id = json.getString(cty_name);
+        	System.out.println( "Coolness: " + cty_id );
+        	
+		
 		return cty_name;
 	}
       function requestURL(urll) {
