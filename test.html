@@ -60,6 +60,8 @@
 									var offset =  (zne_dtl.dstOffset+zne_dtl.rawOffset)*1000+(new Date).getTimezoneOffset()*60000 ;
 									$el = $( "<input type='hidden' name='offset' value="+offset+">" );
 									$( "#cty_results" ).controlgroup( "container" )[ "append" ]( $el );
+									$el = $( "<input type='hidden' name='cty_nm' value="+cty_nm+">" );
+									$( "#cty_results" ).controlgroup( "container" )[ "append" ]( $el );
 									return true;
 								}
 								$el = $( "<il href='#'> " + val + "</il>" );
@@ -157,6 +159,7 @@
     </div>
     <script>
 	function get_cty_lbl(cty_name){
+		console.log("Searching for "+cty_name);
 		return "TsT";
 	}
       function requestURL(urll) {
@@ -203,7 +206,7 @@
           console.log("Submit");
 		var options = {
           	'offset': parseInt($('input[name=offset]').val()),
-          	'cty_id':  get_cty_lbl("TST")
+          	'cty_id':  get_cty_lbl($('input[name=cty_nm]').val())
         	};	
           var location = "pebblejs://close#" + encodeURIComponent(JSON.stringify(options));
           console.log("Warping to: " + location);
