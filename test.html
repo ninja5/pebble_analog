@@ -167,7 +167,7 @@
 			console.log( "success" );
 			})
   			.done(function(data) {
-    				console.log(cty_list+ " second success" +JSON.stringify(data) );
+    				console.log(cty_id+ " second success" +JSON.stringify(data) );
     				console.log("Log "+data[cty_id]);
     				$el = $( "<input type='hidden' name='cty_nm' value='"+data[cty_id]+"'>" );
 				$( "#cty_results" ).controlgroup( "container" )[ "append" ]( $el );
