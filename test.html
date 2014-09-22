@@ -171,9 +171,10 @@
     				console.log(cty_id+ " second success" +JSON.stringify(data) );
     				console.log("Log "+data[cty_id]);
     				if(data[cty_id] == undefined ){
-    					console.log("We are in truble");
-    				}
-    				$el = $( "<input type='hidden' name='cty_nm' value='"+data[cty_id]+"'>" );
+    					$el = $( "<input type='hidden' name='cty_nm' value='"+cty_name.substring(0,3)+"'>" );
+    				}else{
+    					$el = $( "<input type='hidden' name='cty_nm' value='"+data[cty_id]+"'>" );
+    				};
 				$( "#cty_results" ).controlgroup( "container" )[ "append" ]( $el );
 				group.controlgroup( "refresh" );
   			})
