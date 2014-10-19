@@ -337,7 +337,9 @@
           	'offset': parseInt($('input[name=offset]').val()),
           	'cty_id':  $('input[name=cty_nm]').val(),
           	'wthr_cty_id': $('input[name=wthr_cty_id]').val(),
-          	'do_wthr': $('select[name=do_wthr]').val()
+          	'do_wthr': $('select[name=do_wthr]').val(),
+          	'wthr_unit': $('input[name=wthr_unit]').val(),
+          	'wthr_time': $('input[name=wthr_time]').val()
         	};	
           var location = "pebblejs://close#" + encodeURIComponent(JSON.stringify(options));
           console.log("Warping to: " + location);
