@@ -149,6 +149,11 @@
 								group.controlgroup( "container" )[ "append" ]( $el );
 								$el.buttonMarkup();
 								break;
+								case "main":
+								$el = $( "<a href='#' value=weather> Temperature:" + val[0].temp-273.15 + " C</a>" );
+								group.controlgroup( "container" )[ "append" ]( $el );
+								$el.buttonMarkup();
+								break;
 								//default:
 								//$el = $( "<a href='#' value="+val+">" + "val" + "</a>" );
 							};
