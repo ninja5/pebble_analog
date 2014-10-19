@@ -151,8 +151,8 @@
         	</div>
         	
         <div data-role="fieldcontain">
-        	<label for="weather">Weather:</label>
-        	<select name="weather" id="weather" data-role="slider">
+        	<label for="do_wthr">Weather display:</label>
+        	<select name="do_wthr" id="do_wthr" data-role="slider">
         		<option value="0">Off</option>
         		<option value="1">On</option>
         	</select>
@@ -167,19 +167,18 @@
         	
         <div data-role="fieldcontain">
         	<fieldset data-role="controlgroup" data-type="horizontal">
-    			<legend>Weather units:</legend>
-        		<input type="radio" name="weather" id="metric" value="0" checked="checked" />
-	            	<label for="metric">C&#176;</label>
-			<input type="radio" name="weather" id="imperial" value="1"  />
-        		<label for="imperial">F&#176;</label>
+    			<legend>Units:</legend>
+        		<input type="radio" name="wthr_unit" id="celcius" value="0" checked="checked" />
+	            	<label for="celcius">C&#176;</label>
+			<input type="radio" name="wthr_unit" id="faren" value="1"  />
+        		<label for="faren">F&#176;</label>
           	</fieldset>
         </div>
         <div data-role="fieldcontain">
-        	<label for="ftime">Weather update interval:</label>
-        	<input type="range" name="ftime" id="ftime" value="60" min="5" max="180" step="10">
+        	<label for="wthr_time">Update interval:</label>
+        	<input type="range" name="wthr_time" id="wthr_time" value="60" min="5" max="180" step="10">
         </div>
-        
-        <label for="updt_inter">Update interval:</label> 
+       
         <div class="ui-body ui-body-b">
           <fieldset class="ui-grid-a">
               <div class="ui-block-a"><button type="submit" data-theme="d" id="b-cancel">Cancel</button></div>
