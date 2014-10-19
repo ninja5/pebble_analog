@@ -108,7 +108,7 @@
 		$( "#cty_wthr" ).on( "filterablebeforefilter", function ( e, data ) {
 			var value =data.input.val(), group = $( "#cty_wthr_results" ),
 				    $el, Units;
-			if($('input[name=wthr_time]').val()==0){
+			if($('input:radio[name=wthr_unit]:checked').val()==0){
 				Units = "metric";
 			}
 			else{
@@ -123,7 +123,7 @@
 					crossDomain: true,
 					data: {
 						q: value,
-						units=Units
+						units: Units
 					}
 					})
 					.then( function ( response ) {
