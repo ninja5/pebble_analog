@@ -103,6 +103,18 @@
 					group.controlgroup( "container" ).empty();
 				}
 			});
+		
+		
+		$( "#cty_wthr" ).on( "filterablebeforefilter", function ( e, data ) {
+			var value =data.input.val();
+			if ( value && value.length > 2 ) {
+						console.log("Text weather:"+value);
+			}
+		});
+		
+		
+		
+			
 		});
 		function date_time(id,offset){
         		date = new Date();
@@ -160,7 +172,7 @@
         
         <label for="cty_wthr">Weather for:</label> 	
         	<div class="ui-body ui-body-d ui-corner-all">
-		<ul id="cty_wthr" data-inset="true"  data-filter-placeholder="Type a city name..."  data-filter="true" data-text="nanan">
+		<ul id="cty_wthr" data-inset="true"  data-filter-placeholder="Type a city name, Country"  data-filter="true" data-text="nanan">
   		</ul>
         	<div data-role="controlgroup" id="cty_wthr_results"><!-- items will be injected here --><il href='#'> No Info...</il></div>
         	</div>
