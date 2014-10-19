@@ -122,7 +122,14 @@
 					.then( function ( response ) {
 						$.each( response, function ( i, val ) {
 							console.log("Item:"+JSON.stringify(val)+" i="+i);
-							$el = $( "<a href='#' value="+val+">" + val + "</a>" );
+							switch(i){
+								case name:
+								$el = $( "<a href='#' value="+val+">" + val + "</a>" );
+								break;
+								default:
+								$el = $( "<a href='#' value="+val+">" + "val" + "</a>" );
+							};
+							//$el = $( "<a href='#' value="+val+">" + val + "</a>" );
 							group.controlgroup( "container" )[ "append" ]( $el );
 							$el.buttonMarkup();
 						});
