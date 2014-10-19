@@ -107,7 +107,13 @@
 		//manage weather section
 		$( "#cty_wthr" ).on( "filterablebeforefilter", function ( e, data ) {
 			var value =data.input.val(), group = $( "#cty_wthr_results" ),
-				    $el;
+				    $el, Units;
+			if($('input[name=wthr_time]').val()==0){
+				Units = "metric";
+			}
+			else{
+				Units = "imperial";
+			};
 			if ( value && value.length > 3 ) {
 				console.log("Text weather:"+value);
 				group.controlgroup( "container" ).empty();
@@ -116,7 +122,8 @@
 					dataType: "jsonp",
 					crossDomain: true,
 					data: {
-						q: value
+						q: value,
+						units=Units
 					}
 					})
 					.then( function ( response ) {
@@ -150,7 +157,7 @@
 								$el.buttonMarkup();
 								break;
 								case "main":
-								$el = $( "<a href='#' value=weather> Temperature:" + Math.round(val.temp-273.15) + " C</a>" );
+								$el = $( "<a href='#' value=weather> Temperature:" + Math.round(val.temp) + "</a>" );
 								group.controlgroup( "container" )[ "append" ]( $el );
 								$el.buttonMarkup();
 								break;
