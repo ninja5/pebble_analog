@@ -124,10 +124,12 @@
 							console.log("Item:"+JSON.stringify(val)+" i="+i);
 							switch(i){
 								case "id":
-								if(val==0)
-								$el = $( "<a href='#' value="+val+">Please, choose nrearest city:</a>" );
-								else
-								$el = $( "<a href='#' value="+val+">" + val + "</a>" );
+								if(val==0){
+									$el = $( "<a href='#' value="+val+">Please, choose nrearest city:</a>" );
+								}
+								else{
+									$el = $( "<a href='#' value="+val+">" + val + "</a>" );
+								};
 								break;
 								case "name":
 								$el = $( "<a href='#' value="+val+">" + val + "</a>" );
