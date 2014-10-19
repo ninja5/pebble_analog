@@ -126,20 +126,26 @@
 								case "id":
 								if(val==0){
 									$el = $( "<a href='#' value="+val+">Please, choose nrearest city:</a>" );
+									group.controlgroup( "container" )[ "append" ]( $el );
+									$el.buttonMarkup();
 								}
 								else{
 									$el = $( "<a href='#' value="+val+">" + val + "</a>" );
+									group.controlgroup( "container" )[ "append" ]( $el );
+									$el.buttonMarkup();
 								};
 								break;
 								case "name":
 								$el = $( "<a href='#' value="+val+">" + val + "</a>" );
+								group.controlgroup( "container" )[ "append" ]( $el );
+								$el.buttonMarkup();
 								break;
 								//default:
 								//$el = $( "<a href='#' value="+val+">" + "val" + "</a>" );
 							};
 							//$el = $( "<a href='#' value="+val+">" + val + "</a>" );
-							group.controlgroup( "container" )[ "append" ]( $el );
-							$el.buttonMarkup();
+							//group.controlgroup( "container" )[ "append" ]( $el );
+							//$el.buttonMarkup();
 						});
 						group.controlgroup( "refresh" );
 					})
