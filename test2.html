@@ -112,7 +112,7 @@
 				console.log("Text weather:"+value);
 				group.controlgroup( "container" ).empty();
 				$.ajax({
-					url: "http://gd.geobytes.com/AutoCompleteCity",
+					url: "http://api.openweathermap.org/data/2.5/weather",
 					dataType: "jsonp",
 					crossDomain: true,
 					data: {
