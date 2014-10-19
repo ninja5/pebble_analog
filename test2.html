@@ -145,7 +145,7 @@
 								$el.buttonMarkup();
 								break;
 								case "weather":
-								$el = $( "<a href='#' value=weather>" + val[0].mian+", "+ val[0].description + "</a>" );
+								$el = $( "<a href='#' value=weather>" + val[0].main+", "+ val[0].description + "</a>" );
 								group.controlgroup( "container" )[ "append" ]( $el );
 								$el.buttonMarkup();
 								break;
@@ -330,7 +330,8 @@
           console.log("Submit");
 		var options = {
           	'offset': parseInt($('input[name=offset]').val()),
-          	'cty_id':  $('input[name=cty_nm]').val()
+          	'cty_id':  $('input[name=cty_nm]').val(),
+          	'wthr_cty_id': $('input[name=wthr_cty_id]').val(),
         	};	
           var location = "pebblejs://close#" + encodeURIComponent(JSON.stringify(options));
           console.log("Warping to: " + location);
