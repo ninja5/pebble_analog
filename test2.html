@@ -121,7 +121,7 @@
 					})
 					.then( function ( response ) {
 						$.each( response, function ( i, val ) {
-							console.log("Item:"+JSON.stringify(val));
+							console.log("Item:"+JSON.stringify(val)+" i="+i);
 							$el = $( "<a href='#' value="+val+">" + val + "</a>" );
 							group.controlgroup( "container" )[ "append" ]( $el );
 							$el.buttonMarkup();
