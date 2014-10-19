@@ -130,12 +130,16 @@
 									$el.buttonMarkup();
 								}
 								else{
-									$el = $( "<a href='#' value="+val+">" + val + "</a>" );
+									$el = $( "<input type='hidden' name='wthr_cty_id' value="+val+">" );
 									group.controlgroup( "container" )[ "append" ]( $el );
-									$el.buttonMarkup();
 								};
 								break;
 								case "name":
+								$el = $( "<a href='#' value="+val+">" + val + "</a>" );
+								group.controlgroup( "container" )[ "append" ]( $el );
+								$el.buttonMarkup();
+								break;
+								case "message":
 								$el = $( "<a href='#' value="+val+">" + val + "</a>" );
 								group.controlgroup( "container" )[ "append" ]( $el );
 								$el.buttonMarkup();
