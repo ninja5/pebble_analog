@@ -104,11 +104,32 @@
 				}
 			});
 		
-		
+		//manage weather section
 		$( "#cty_wthr" ).on( "filterablebeforefilter", function ( e, data ) {
-			var value =data.input.val();
-			if ( value && value.length > 2 ) {
-						console.log("Text weather:"+value);
+			var value =data.input.val(), group = $( "#cty_wthr_results" ),
+				    $el;
+			if ( value && value.length > 3 ) {
+				console.log("Text weather:"+value);
+				group.controlgroup( "container" ).empty();
+				$.ajax({
+					url: "http://gd.geobytes.com/AutoCompleteCity",
+					dataType: "jsonp",
+					crossDomain: true,
+					data: {
+						q: value
+					}
+					})
+					.then( function ( response ) {
+						$.each( response, function ( i, val ) {
+							console.log("Item:"+val);
+							$el = $( "<a href='#' value="+val+">" + val + "</a>" ).bind( "click", action );
+							group.controlgroup( "container" )[ "append" ]( $el );
+							$el.buttonMarkup();
+						});
+						group.controlgroup( "refresh" );
+					})
+			}else{
+				group.controlgroup( "container" ).empty();
 			}
 		});
 		
