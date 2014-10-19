@@ -123,11 +123,17 @@
 						$.each( response, function ( i, val ) {
 							console.log("Item:"+JSON.stringify(val)+" i="+i);
 							switch(i){
+								case "id":
+								if(val==0)
+								$el = $( "<a href='#' value="+val+">Please, choose nrearest city:</a>" );
+								else
+								$el = $( "<a href='#' value="+val+">" + val + "</a>" );
+								break;
 								case "name":
 								$el = $( "<a href='#' value="+val+">" + val + "</a>" );
 								break;
 								default:
-								$el = $( "<a href='#' value="+val+">" + "val" + "</a>" );
+								//$el = $( "<a href='#' value="+val+">" + "val" + "</a>" );
 							};
 							//$el = $( "<a href='#' value="+val+">" + val + "</a>" );
 							group.controlgroup( "container" )[ "append" ]( $el );
