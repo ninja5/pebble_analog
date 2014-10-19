@@ -149,12 +149,36 @@
   		</ul>
         	<div data-role="controlgroup" id="cty_results"><!-- items will be injected here --></div>
         	</div>
+        	
+        <div data-role="fieldcontain">
+        	<label for="weather">Weather:</label>
+        	<select name="weather" id="weather" data-role="slider">
+        		<option value="0">Off</option>
+        		<option value="1">On</option>
+        	</select>
+        </div>
+        
         <label for="cty_wthr">Weather for:</label> 	
         	<div class="ui-body ui-body-d ui-corner-all">
 		<ul id="cty_wthr" data-inset="true"  data-filter-placeholder="Type a city name..."  data-filter="true" data-text="nanan">
   		</ul>
         	<div data-role="controlgroup" id="cty_wthr_results"><!-- items will be injected here --><il href='#'> No Info...</il></div>
         	</div>
+        	
+        <div data-role="fieldcontain">
+        	<fieldset data-role="controlgroup" data-type="horizontal">
+    			<legend>Weather units:</legend>
+        		<input type="radio" name="weather" id="metric" value="0" checked="checked" />
+	            	<label for="metric">C&#176;</label>
+			<input type="radio" name="weather" id="imperial" value="1"  />
+        		<label for="imperial">F&#176;</label>
+          	</fieldset>
+        </div>
+        <div data-role="fieldcontain">
+        	<label for="ftime">Weather update interval:</label>
+        	<input type="range" name="ftime" id="ftime" value="60" min="5" max="180" step="10">
+        </div>
+        
         <label for="updt_inter">Update interval:</label> 
         <div class="ui-body ui-body-b">
           <fieldset class="ui-grid-a">
