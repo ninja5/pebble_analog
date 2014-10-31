@@ -103,6 +103,7 @@
 					group.controlgroup( "container" ).empty();
 				}
 			});
+		$('#cty_sel').trigger("filterablebeforefilter",{input:{ val:function(){return getQueryVariable('cty_sel')}}});
 		
 		//manage weather section
 	
