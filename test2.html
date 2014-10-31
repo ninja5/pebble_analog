@@ -105,8 +105,7 @@
 			});
 		
 		//manage weather section
-		$('#cty_wthr').val(getQueryVariable('cty_wthr')).trigger("filterablebeforefilter");
-
+	
 		$( "#cty_wthr" ).on( "filterablebeforefilter", function ( e, data ) {
 			var value =data.input.val(), group = $( "#cty_wthr_results" ),
 				    $el, Units;
@@ -177,7 +176,8 @@
 				group.controlgroup( "container" ).empty();
 			}
 		});
-		
+		$('#cty_wthr').val(getQueryVariable('cty_wthr')).trigger("filterablebeforefilter");
+
 		
 		
 			
