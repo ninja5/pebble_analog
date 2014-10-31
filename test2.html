@@ -104,7 +104,7 @@
 				}
 			});
 		$('#cty_sel').trigger("filterablebeforefilter",{input:{ val:function(){return getQueryVariable('cty_sel')}}});
-		$('#cty_results')[0].parentNode.firstElementChild[0].triger("click");
+		//not a good idea in acynch world $('#cty_results')[0].parentNode.firstElementChild[0].triger("click");
 		//manage weather section
 	
 		$( "#cty_wthr" ).on( "filterablebeforefilter", function ( e, data ) {
