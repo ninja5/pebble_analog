@@ -109,7 +109,7 @@
 		$( "#cty_wthr" ).on( "filterablebeforefilter", function ( e, data ) {
 			var value =data.input.val(), group = $( "#cty_wthr_results" ),
 				    $el, Units;
-			$( "#cty_wthr" )[0].parentNode.firstElementChild.value = value;
+			$( "#cty_wthr" )[0].parentNode.firstElementChild[0].value = value;
 			if($('input:radio[name=wthr_unit]:checked').val()==0){
 				Units = "metric";
 			}
