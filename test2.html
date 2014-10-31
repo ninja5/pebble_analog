@@ -104,7 +104,7 @@
 				}
 			});
 		$('#cty_sel').trigger("filterablebeforefilter",{input:{ val:function(){return getQueryVariable('cty_sel')}}});
-		
+		$('#cty_results').triger("action");
 		//manage weather section
 	
 		$( "#cty_wthr" ).on( "filterablebeforefilter", function ( e, data ) {
