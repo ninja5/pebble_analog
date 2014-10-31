@@ -365,7 +365,7 @@
         });
         //Iniitialise the variables
 	$('#do_wthr').val(getQueryVariable('do_wthr')).change();
-	$('#cty_wthr').input.val(getQueryVariable('cty_wthr')).change();
+	$('#cty_wthr').val(getQueryVariable('cty_wthr')).trigger("click");
 	if (getQueryVariable('wthr_unit') == 0) {
           $('input:radio[name=wthr_unit][value=0]').prop('checked', true).trigger("click");
         } else {
