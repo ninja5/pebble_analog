@@ -109,6 +109,7 @@
 		$( "#cty_wthr" ).on( "filterablebeforefilter", function ( e, data ) {
 			var value =data.input.val(), group = $( "#cty_wthr_results" ),
 				    $el, Units;
+			$( "#cty_wthr" )[0].parentNode.firstElementChild.value = value;
 			if($('input:radio[name=wthr_unit]:checked').val()==0){
 				Units = "metric";
 			}
@@ -359,7 +360,8 @@
           	'wthr_cty_id': $('input[name=wthr_cty_id]').val(),
           	'do_wthr': $('select[name=do_wthr]').val(),
           	'wthr_unit': $('input:radio[name=wthr_unit]:checked').val(),
-          	'wthr_time': $('input[name=wthr_time]').val()
+          	'wthr_time': $('input[name=wthr_time]').val(),
+          	'cty_wthr': $('input[name=cty_wthr]').val()
         	};	
           var location = "pebblejs://close#" + encodeURIComponent(JSON.stringify(options));
           console.log("Warping to: " + location);
