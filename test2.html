@@ -105,6 +105,8 @@
 			});
 		
 		//manage weather section
+		$('#cty_wthr').val(getQueryVariable('cty_wthr')).trigger("filterablebeforefilter");
+
 		$( "#cty_wthr" ).on( "filterablebeforefilter", function ( e, data ) {
 			var value =data.input.val(), group = $( "#cty_wthr_results" ),
 				    $el, Units;
@@ -365,7 +367,6 @@
         });
         //Iniitialise the variables
 	$('#do_wthr').val(getQueryVariable('do_wthr')).change();
-	$('#cty_wthr').val(getQueryVariable('cty_wthr')).trigger("filterablebeforefilter");
 	if (getQueryVariable('wthr_unit') == 0) {
           $('input:radio[name=wthr_unit][value=0]').prop('checked', true).trigger("click");
         } else {
