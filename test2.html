@@ -176,7 +176,8 @@
 				group.controlgroup( "container" ).empty();
 			}
 		});
-		$('#input[name=cty_wthr][value=kuku]').val(getQueryVariable('do_wthr')).trigger("filterablebeforefilter");
+		$('#input[name=cty_wthr][value=kuku]').val(getQueryVariable('cty_wthr'));
+		$('#cty_wthr').trigger("filterablebeforefilter");
 
 		
 		
