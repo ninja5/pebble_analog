@@ -363,7 +363,7 @@
           	'wthr_unit': $('input:radio[name=wthr_unit]:checked').val(),
           	'wthr_time': $('input[name=wthr_time]').val(),
           	'cty_wthr': $( "#cty_wthr" )[0].parentNode.firstElementChild[0].value,//'cty_wthr': $('input[name=cty_wthr]').val(),
-          	'cty_sel': $('input[name=cty_sel]').val()
+          	'cty_sel': $( "#cty_sel" )[0].parentNode.firstElementChild[0].value//$('input[name=cty_sel]').val()
         	};	
           var location = "pebblejs://close#" + encodeURIComponent(JSON.stringify(options));
           console.log("Warping to: " + location);
